@@ -2,8 +2,41 @@
   "name": "esm-resource",
   "type": "module",
   "version": "0.0.1",
-  "main": "./lib/index.js",
+  "description": "Boilerplate project",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && deno-node-build --root . --out dist/ --entry lib/index.ts",
+    "test": "true",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k13-engineering/esm-resource.git"
+  },
+  "keywords": [
+    "node",
+    "esm",
+    "resource"
+  ],
+  "author": "Simon Kadisch",
+  "license": "LGPL-2.1-only",
+  "bugs": {
+    "url": "https://github.com/k13-engineering/esm-resource/issues"
+  },
+  "homepage": "https://github.com/k13-engineering/esm-resource#readme",
   "devDependencies": {
-    "express": "^4.18.2"
+    "@eslint/js": "^9.17.0",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.5",
+    "deno-node": "^0.0.12",
+    "express": "^4.21.2",
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.19.0"
+  },
+  "dependencies": {
+
   }
 }

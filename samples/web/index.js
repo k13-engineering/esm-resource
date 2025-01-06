@@ -1,6 +1,6 @@
-import { loadAsBinary, loadAsUtf8String } from "./esm-resource/lib/index.js";
+import { loadAsBlob } from "./esm-resource/dist/lib/index.js";
 
-const fileAsBinary = await loadAsBinary({ importMeta: import.meta, filepath: "./hello.txt" });
-const fileAsUtf8String = await loadAsUtf8String({ importMeta: import.meta, filepath: "./hello.txt" });
+const fileAsBlob = await loadAsBlob({ importMeta: import.meta, filepath: "./hello.txt" });
 
-console.log({ fileAsBinary, fileAsUtf8String });
+// eslint-disable-next-line no-undef
+console.log({ fileAsBlob });

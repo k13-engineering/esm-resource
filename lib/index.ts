@@ -67,7 +67,7 @@ const determineNativeModule = (): TPlatformModule => {
   };
 };
 
-const loadAsBlob = ({ importMeta, filepath }: { importMeta: TImportMeta, filepath: string }) => {
+const loadAsBlob = ({ importMeta, filepath }: { importMeta: TImportMeta, filepath: string }): Promise<Blob> => {
   const pathToLoad = resolve({ importMeta, filepath });
   const nativeModule = determineNativeModule();
 
